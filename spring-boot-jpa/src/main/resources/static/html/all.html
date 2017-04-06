@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/js/jquery-easy-ui1.4.1/themes/default/easyui.css" />
+    <link rel="stylesheet" href="/js/jquery-easy-ui1.4.1/demo.css" />
+    <link rel="stylesheet" href="/js/jquery-easy-ui1.4.1/themes/icon.css" />
+    <script type="text/javascript" src="/js/JQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/jquery-easy-ui1.4.1/jquery.easyui.min.js"></script>
+     
+   <!--  <meta charset="UTF-8">
+	<title>Basic DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="/js/jquery-easy-ui1.4.1/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/js/jquery-easy-ui1.4.1/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="/js/jquery-easy-ui1.4.1/demo.css">
+	<script type="text/javascript" src="/js/jQuery/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-easy-ui1.4.1/jquery.easyui.min.js"></script> -->
+    
+</head>
+<body>
+   
+    <h2>Basic DataGrid</h2>
+	<p>The DataGrid is created from markup, no JavaScript code needed.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<table class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
+			data-options="singleSelect:true,collapsible:true,url:'/springboot/item/findAll',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'ID',width:80">Item ID</th>
+				<th data-options="field:'NAME',width:100">Product</th>
+				<!-- <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:250">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center'">Status</th> -->
+			</tr>
+		</thead>
+	</table> 
+	
+	<!-- <h2>Basic DataGrid</h2>
+	<p>The DataGrid is created from markup, no JavaScript code needed.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<table class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
+			data-options="singleSelect:true,collapsible:true,url:'/json/datagrid_data1.json',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:80">Item ID</th>
+				<th data-options="field:'productid',width:100">Product</th>
+				<th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:250">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center'">Status</th>
+			</tr>
+		</thead>
+	</table> -->
+
+
+	<div id="tt" class="easyui-tabs" style="width: 500px; height: 250px;" fit="true" border="false">
+		<div title="Tab1" style="padding: 20px;" border="false">
+			<table id="dg">
+			</table>
+		</div>
+	</div>
+</body>
+</html>

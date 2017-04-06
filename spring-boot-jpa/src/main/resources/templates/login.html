@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>欢迎登陆</h1>
+	<hr></hr>
+	<div>
+		<form th:action="@{/springboot/user/login}" method="post">
+			姓名:<input type="text" name="username" /><br /> 密码:<input type="text"
+				name="password" /><br /> <input type="submit" value="登陆" />
+
+		</form>
+	</div>
+	<div>
+		<a th:href="@{/register}" href="#">注册</a>
+	</div>
+</body>
+</html>

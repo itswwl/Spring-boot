@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+<li th:each="item : ${items}"><span th:text="${item.id}"/>----<span th:text="${item.num}"/>----<span th:text="${item.goods.id}"/>----<span th:text="${item.goods.goodsName}"/></li>
+</ul>
+</body>
+</html>
