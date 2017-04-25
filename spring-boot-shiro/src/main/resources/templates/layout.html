@@ -1,0 +1,98 @@
+<ul id="topmenu" th:fragment="topmenu" th:if="${f == 'top'}">
+	<li th:each="ts:${topSources}" th:text="${ts.sourcename}" th:attr="f=${ts.url},id=${ts.id}"></li>
+	<!-- <li f="f1">f1</li>
+	<li f="f2">f2</li>
+	<li f="f3">f3</li>
+	<li f="f4">f4</li> -->
+</ul>
+
+<ul id="leftmenu" th:fragment="leftmenu" th:if="${f == 'left'}">
+	<li th:each="left2:${leftSource}" th:if="${left2.type==2}" >
+		<a href="javascript:void(0);" th:text="${left2.sourcename}" th:if="${left2.type==2}">f1数据一</a>
+		<ul class="left3">
+			<li th:each="left3:${leftSource}" th:if="${left3.pid==left2.id}" th:attr="id=${left3.id},f=${left3.url}" th:text="${left3.sourcename}"></li>
+		</ul>
+	</li>
+	<!-- <li>
+		<a href="javascript:void(0);">f1数据一</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+	<li>
+		<a href="javascript:void(0);">f1数据二</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li> -->
+</ul>
+
+<!-- <ul id="leftmenu" th:fragment="leftmenu" th:if="${f == 'f2'}">
+	<li>
+		<a href="javascript:void(0);">f2数据一</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+	<li>
+		<a href="javascript:void(0);">f2数据二</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+</ul>
+
+
+<ul id="leftmenu" th:fragment="leftmenu" th:if="${f == 'f3'}">
+	<li>
+		<a href="javascript:void(0);">f3数据一</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+	<li>
+		<a href="javascript:void(0);">f3数据二</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+</ul>
+
+<ul id="leftmenu" th:fragment="leftmenu" th:if="${f == 'f4'}">
+	<li>
+		<a href="javascript:void(0);">f4数据一</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+	<li>
+		<a href="javascript:void(0);">f4数据二</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</li>
+</ul> -->

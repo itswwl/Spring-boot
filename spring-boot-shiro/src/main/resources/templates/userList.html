@@ -1,0 +1,83 @@
+<table cellspacing="0" cellpadding="0" th:if="${getData!=null}">
+	<thead>
+		<tr>
+			<th>测试标题1</th>
+			<th>测试标题2</th>
+			<th>测试标题3</th>
+			<th>测试标题4</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>测试内容11</td>
+			<td>测试内容12</td>
+			<td>测试内容13</td>
+			<td>测试内容14</td>
+			<td class="opt">
+				<a href="javascript:void(0);" id="view_1">详情</a> 
+				<a href="javascript:void(0);" id="update_1">修改</a> 
+				<a href="javascript:void(0);" id="del_1">删除</a>
+			</td>
+		</tr>
+		<tr>
+			<td>测试内容21</td>
+			<td>测试内容22</td>
+			<td>测试内容23</td>
+			<td>测试内容24</td>
+			<td class="opt">
+				<a href="javascript:void(0);" id="view_2">详情</a> 
+				<a href="javascript:void(0);" id="update_2">修改</a>
+				<a href="javascript:void(0);" id="del_2">删除</a>
+			</td>
+		</tr>
+		<tr>
+			<td>测试内容31</td>
+			<td>测试内容32</td>
+			<td>测试内容33</td>
+			<td>测试内容34</td>
+			<td class="opt">
+				<a href="javascript:void(0);" id="view_3" >详情</a> 
+				<a href="javascript:void(0);" id="update_3">修改</a> 
+				<a href="javascript:void(0);" id="del_3">删除</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table cellspacing="0" cellpadding="0" th:if="${view!=null}">
+	
+	<tbody>
+		<tr>
+			<th>label1</th>
+			<td>测试内容11</td>
+			<th>label2</th>
+			<td>测试内容12</td>
+		</tr>
+		<tr>
+			<th>label3</th>
+			<td>测试内容13</td>
+			<th>label4</th>
+			<td>测试内容14</td>
+		</tr>
+	</tbody>
+</table>
+
+<table cellspacing="0" cellpadding="0" th:if="${update!=null}">
+	
+	<tbody>
+		<tr>
+			<th>label1</th>
+			<td>测试内容11</td>
+			<th>label2</th>
+			<td>测试内容12</td>
+		</tr>
+		<tr>
+			<th>label3</th>
+			<td>测试内容13</td>
+			<th>label4</th>
+			<td>测试内容14</td>
+		</tr>
+	</tbody>
+</table>
