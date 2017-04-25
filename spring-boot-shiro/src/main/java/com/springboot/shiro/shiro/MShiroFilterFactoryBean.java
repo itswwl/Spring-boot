@@ -17,7 +17,13 @@ import org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver;
 import org.apache.shiro.web.mgt.WebSecurityManager;
 import org.apache.shiro.web.servlet.AbstractShiroFilter;
 import org.springframework.beans.factory.BeanInitializationException;
-
+/*
+*
+*
+* Spring Boot Shiro 权限管理
+*
+*  http://blog.csdn.net/catoop/article/details/50520958
+**/
 public class MShiroFilterFactoryBean extends ShiroFilterFactoryBean {
 
     // 对ShiroFilter来说，需要直接忽略的请求
