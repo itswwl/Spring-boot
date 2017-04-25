@@ -29,26 +29,29 @@ function topmenu_item_sysurl_click(f,id)
 }
 //入职管理
 function leftmenu_item_inurl_click(){
-	cpcMain.loadSearchResultGrid("/inurl/getData",null,function(){
+	cpcMain.loadSearchResultGrid("/inurl/getDataView",null,function(){
 		$(".opt a").on("click",function(){
 			var id = $(this).attr("id");
 //			alert(id);
 			console.info(id);
 			var ids=id.split("_");
 			if(ids[0]=="view"){
-				cpcMain.loadPopWinMagWindow("/inurl/view");
+				cpcMain.loadPopWinMagWindow("/inurl/detailView");
 			}else if(ids[0]=="update"){
-				cpcMain.loadPopWinMagWindow("/inurl/view");
+				cpcMain.loadPopWinMagWindow("/inurl/update");
 			}else if(ids[0]=="del"){
-//				$.ajax({
-//					url:"",
-//					type:"post",
-//					data:"",
-//					dataType:"json",
-//					success:function(data){
-//						
-//					}
-//				});
+				$.ajax({
+					url:"/inurl/delete/"+ids[1],
+					type:"post",
+					data:{
+						"val":"val"
+					},
+					dataType:"json",
+					success:function(data){
+						var jsonData = eval(data);
+						console.info(jsonData);
+					}
+				});
 			}
 		})
 	});

@@ -1,7 +1,10 @@
 package com.springboot.shiro.shiro;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import javax.servlet.Filter;
 
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
@@ -15,6 +18,12 @@ import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreato
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+
+/**
+ * @author Administrator
+ *
+ */
 @Configuration
 public class ShiroConfiguration {
 
@@ -104,6 +113,7 @@ public class ShiroConfiguration {
 //        filterChainDefinitionMap.put("/login", "anon");
 //        filterChainDefinitionMap.put("/**", "anon");//anon 可以理解为不拦截
         
+        filterChainDefinitionMap.put("/main/**", "user");
         filterChainDefinitionMap.put("/user/login", "anon");
         filterChainDefinitionMap.put("/user/logout", "logout");
         
@@ -135,9 +145,23 @@ public class ShiroConfiguration {
         // 登录成功后要跳转的连接
         shiroFilterFactoryBean.setSuccessUrl("/main/index");
 //        shiroFilterFactoryBean.setUnauthorizedUrl("/403");
-
+        HashMap<String, Filter> filters = new HashMap<String, Filter>();
+        MyAccessControlFilter myAccessControlFilter = new MyAccessControlFilter();
+        filters.put("authenticated", myAccessControlFilter);
+        shiroFilterFactoryBean.setFilters(filters);
         loadShiroFilterChain(shiroFilterFactoryBean);
         return shiroFilterFactoryBean;
+    }
+    
+    /**
+     * http://www.cnblogs.com/xiaojf/p/6613537.html
+     * thymeleaf 使用shiro标签
+     * 
+     * @return
+     */
+    @Bean(name = "shiroDialect")
+    public ShiroDialect shiroDialect(){
+      return new ShiroDialect();
     }
 
 }

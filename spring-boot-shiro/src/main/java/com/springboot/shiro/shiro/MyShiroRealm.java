@@ -36,7 +36,7 @@ public class MyShiroRealm extends AuthorizingRealm{
         //到数据库查是否有此对象
         SessionUser sessionUser = UserSecurity.getCurrentUser();
         info.addStringPermissions(sessionUser.getAuthority());
-        return null;
+        return info;
     }
 
     /**
