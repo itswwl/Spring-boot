@@ -3,6 +3,8 @@ package com.my.boot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author root
@@ -51,9 +53,17 @@ import org.springframework.context.annotation.ComponentScan;
  * 
  *
  */
+@Controller
+
 @SpringBootApplication
+
 @ComponentScan(basePackages ={"com.my.boot.model","com.my.boot.dao","com.my.boot.service","com.my.boot.controller","com.my.boot.configer"})
 public class Application {
+	
+	@RequestMapping("/index")
+	public String idex(){
+		return "index";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

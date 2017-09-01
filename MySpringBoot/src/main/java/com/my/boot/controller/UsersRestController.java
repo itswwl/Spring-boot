@@ -10,7 +10,9 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.my.boot.model.Users;
@@ -81,6 +83,13 @@ public class UsersRestController {
 		map.put("size", 2);
 		map.put("name", "test");
 		return usersService.searchByPage(map);
+	}
+	
+	@RequestMapping(value = "/query",method = {RequestMethod.DELETE},consumes = {"application/json","text/plain"})
+	public Map<String,String> query(@RequestBody String body){
+		final Map<String,String> map = new HashMap<String, String>();
+		System.out.println(body);
+		return map;
 	}
 
 }

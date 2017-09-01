@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"/>
 <title>Insert title here</title>
+
+<script type="text/javascript" src="/js/jquery.min.js" ></script>
 </head>
 <body>
 jjj
+<button id="click">提交</button>
+
 </body>
+<script type="text/javascript">
+var query = {
+		query:{
+			term:{
+				_bid:"123445"
+			}
+		}	
+};
+
+$("#click").click(function(){
+	$.ajax({
+		type:"delete",
+		url:"/restUsers/query",
+		data:JSON.stringify(query),
+		dataType:"application/json",
+		contentType:"application/json",
+		success:function(data){
+			console.info(data);
+		}
+	});
+});
+
+</script>
 </html>
