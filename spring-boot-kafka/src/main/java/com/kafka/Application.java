@@ -7,7 +7,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 /**
  * 
  * 
- * Windows平台下kafka环境的搭建 https://www.2cto.com/net/201701/588235.html
+ * Windows平台锟斤拷kafka锟斤拷锟斤拷锟侥搭建 https://www.2cto.com/net/201701/588235.html
  * http://kafka.apache.org/quickstart
  * 
  * 
@@ -42,6 +42,10 @@ import org.springframework.kafka.annotation.EnableKafka;
  * 
  * spring boot + kafka
  * https://www.cnblogs.com/kangoroo/p/7353330.html
+ * 
+ * 
+ * java kafka
+ * http://blog.csdn.net/lnho2015/article/details/51353936
  * 
  * 
  * @author root
