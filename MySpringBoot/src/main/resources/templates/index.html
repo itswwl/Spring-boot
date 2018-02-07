@@ -32,6 +32,20 @@ $("#click").click(function(){
 		}
 	});
 });
+$.ajax({
+	type:"get",
+	url:"http://localhost:8014/api/service/updates/apply/status",
+	//dataType:"application/json",
+	async:false,
+	//dataType:"jsonp",    //跨域json请求一定是jsonp
+	//headers:{"_secret":"5a6a82857ee5ec132009cb19","_orgId":"5a6a82857ee5ec132009cb17","Content-Type":"application/json"},
+	success:function(data){
+		console.info(data);
+	}
+
+	
+});
+
 
 </script>
 </html>
